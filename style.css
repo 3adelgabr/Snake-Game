@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(24, 40, 50);
+    color: rgb(210, 238, 255);
+}
+
+.min {
+    width: 135vmin;
+    height: 95vmin;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 6px;
+    background: #162339;
+    box-shadow: 0 20px 40px rgba(52, 87, 220, 0.2);
+    
+}
+
+.game-details {
+    color: rgb(210, 238, 255);
+    font-weight: bold;
+    font-size: 1.3rem;
+    padding: 20px 28px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.play-board {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    background: #0b1322;
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+    transition: background-color 0.3s ease;
+}
+
+.play-board .food {
+    background: #00ff8c;
+    height: 12px;
+    border-radius:2px 2px 2px 2px;
+}
+
+.play-board .head {
+    background: #60cbff;
+    transition: background-color 0.3s ease;
+    height: 12px;
+    border-radius:2px 2px 2px 2px;
+    box-shadow:2px 2px 2px 1px rgba(5, 226, 255, 0.1);
+}
+
+.controls i {
+    padding: 25px 0;
+    text-align: center;
+    font-size: 1.4rem;
+    color: #b7c7e1;
+    width: calc(100% / 4);
+    cursor: pointer;
+    border-right: 1px solid #18c0b5 ;
+}
+
+.restart-button {
+    margin: 6px auto;
+    padding: 8px 16px;
+    background: #32a7ad;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.restart-button:hover {
+    background: #dafcff;
+    color: #162339;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: center;
+    z-index: 10000;
+}
+
+.popup.win {
+    background: #ddf5e3;
+    color: #358655;
+    font-weight: bold;
+}
+
+.popup.lose {
+    background: #f8d7da;
+    color: #d21f31;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+    .wrapper {
+        width: 100vmin;
+        height: 125vmin;
+    }
+
+    .game-details {
+        font-size: 1rem;
+        padding: 16px 28px;
+    }
+
+    .controls {
+        display: flex;
+    }
+
+    .controls i {
+        padding: 16px 0;
+        font-size: 1rem;
+    }
+}

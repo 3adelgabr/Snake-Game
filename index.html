@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Snake Game</title>
+</head>
+<body>
+    <audio id="eat-sound" src="eat-sound.mp3"></audio>
+    <audio id="game-over-sound" src="game-over-sound.mp3"></audio>
+    <audio id="you-win" src="you-win.mp3"></audio>
+    <div class="min">
+        <div class="game-details">
+            <span class="score">Score: 0</span>
+            <span class="high-score">High Score: 0</span>
+        </div>
+        <div class="play-board"></div>
+        <button class="restart-button">Restart Game</button>
+    </div>
+
+    <div id="popup" class="popup">
+        <div id="popup-text"></div>
+        <button id="popup-restart" class="restart-button">Restart Game</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
